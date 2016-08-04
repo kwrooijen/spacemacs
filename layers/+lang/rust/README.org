@@ -40,11 +40,20 @@ procedure, look [[https://github.com/racer-rust/emacs-racer][here]].
 
 * Key bindings
 
-| Key Binding | Description                       |
-|-------------+-----------------------------------|
-| ~SPC m c c~ | compile project with Cargo        |
-| ~SPC m c t~ | run tests with Cargo              |
-| ~SPC m c d~ | generate documentation with Cargo |
-| ~SPC m c x~ | execute the project with Cargo    |
-| ~SPC m c C~ | remove build artifacts with Cargo |
-| ~SPC m g g~ | go jump to definition             |
+| Key Binding | Description                                 |
+|-------------+---------------------------------------------|
+| ~, c .~     | repeat the last Cargo command               |
+| ~, c c~     | compile project with Cargo                  |
+| ~, c d~     | generate documentation with Cargo           |
+| ~, c e~     | run benchmarks with Cargo                   |
+| ~, c f~     | run the current test with Cargo             |
+| ~, c i~     | create a new project with Cargo (init)      |
+| ~, c l~     | remove build artifacts with Cargo           |
+| ~, c n~     | create a new project with Cargo (new)       |
+| ~, c o~     | run all tests in current file with Cargo    |
+| ~, c r~     | execute a project with Cargo                |
+| ~, c s~     | search for packages on crates.io with Cargo |
+| ~, c t~     | run tests with Cargo                        |
+| ~, c u~     | update dependencies with Cargo              |
+| ~, c x~     | execute a project example with Cargo        |
+| ~, g g~     | go jump to definition                       |

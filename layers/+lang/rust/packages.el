@@ -11,6 +11,7 @@
 
 (setq rust-packages
   '(
+    cargo
     company
     company-racer
     racer
@@ -42,11 +43,20 @@
       (spacemacs/declare-prefix-for-mode 'rust-mode "mc" "cargo")
       (spacemacs/declare-prefix-for-mode 'rust-mode "mg" "goto")
       (spacemacs/set-leader-keys-for-major-mode 'rust-mode
-        "cc" 'spacemacs/rust-cargo-build
-        "ct" 'spacemacs/rust-cargo-test
-        "cd" 'spacemacs/rust-cargo-doc
-        "cx" 'spacemacs/rust-cargo-run
-        "cC" 'spacemacs/rust-cargo-clean
+        "c." 'cargo-process-repeat
+        "cc" 'cargo-process-build
+        "cd" 'cargo-process-doc
+        "ce" 'cargo-process-bench
+        "cf" 'cargo-process-current-test
+        "ci" 'cargo-process-init
+        "cl" 'cargo-process-clean
+        "cn" 'cargo-process-new
+        "co" 'cargo-process-current-file-tests
+        "cr" 'cargo-process-run
+        "cs" 'cargo-process-search
+        "ct" 'cargo-process-test
+        "cu" 'cargo-process-update
+        "cx" 'cargo-process-run-example
         "gg" 'racer-find-definition))))
 
 (defun rust/init-toml-mode ()
